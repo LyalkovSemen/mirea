@@ -1,7 +1,8 @@
-1 1 1 1
-2 2 2 2
-3 3 3 3
-4 4 4 4
-5 5 5 5
-6 6 6 6
-7 7 7 7
+﻿
+2.11.2016; 05.11.1995; 23.1.1996; 3.11.2019; 99.11.1995; 10.77.2000; 1.1.2000
+05.02.1994; 22:15:00+0300; 08.02.1994 20:15:12; 01.02.2017 2:15:00
+jonson@mail.ru; m@mail.ru; mail.com; semen@583.error; semen-s@bk.ru
+file.gif; file.png; file.jpg; file.PNG; file
+<html lang='ru'><head><title attr>tile</title></head></html>
+<a href="http://url1.com" title="title test">test</a> <a href="http://url2.com/">test2</a><a title="some !_ extra #! title">link</a>
+бесполезно менять эти слова местами
