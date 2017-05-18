@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lift"
         mc:Ignorable="d"
-        Title="Имитация работы лифта" Height="500" Width="700" MinWidth="700" MinHeight="500" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Icon="Images/main_icon.ico">
+        Title="Имитация работы лифта" Height="470" MinHeight="470" Width="500" MinWidth="500"  ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Icon="Images/main_icon.ico">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid>
-            <StackPanel Name="SPanel" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Stretch" Width="300"/>
+            <StackPanel Name="SPanel" HorizontalAlignment="Left" Margin="10,10,0,10" VerticalAlignment="Stretch" Width="120"/>
             <Canvas Name="Canv">
-                <Image Name="imLift" Source="Images/dors_closed.jpg" Height="40" Width="54" Canvas.Left="60" Canvas.Top="10"/>
+                <Image Name="imLift" Source="Images/dors_closed.jpg" Height="40" Width="54" Canvas.Left="50" Canvas.Top="10"/>
             </Canvas>
-            <Border BorderBrush="#FF4A84B6" CornerRadius="6" BorderThickness="2" Margin="330,10,20,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Padding="5">
+            <Border BorderBrush="#FF4A84B6" CornerRadius="6" BorderThickness="2" Margin="150,10,20,0" VerticalAlignment="Top" HorizontalAlignment="Stretch" Padding="5">
                 <WrapPanel Name="BtnPannel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
             </Border>
         </Grid>

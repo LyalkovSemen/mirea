@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lift"
         mc:Ignorable="d"
-        Title="Параметры" Height="235.705" Width="353.602"  WindowStartupLocation="CenterScreen" Icon="Images/main_icon.ico" ResizeMode="NoResize">
+        Title="Параметры" Height="225.705" Width="353.602"  WindowStartupLocation="CenterScreen" Icon="Images/main_icon.ico" ResizeMode="NoResize">
     <Grid>
         <StackPanel HorizontalAlignment="Stretch" Margin="10,10,10,50" VerticalAlignment="Stretch">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" Margin="0,0,0,10">
@@ -23,7 +23,7 @@
             
 
         </StackPanel>
-        <Button Name="btnOk" Content="Далее" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="91" Height="29" FontSize="16" Click="btnOk_Click"/>
+        <Button Name="btnOk" Content="Далее" HorizontalAlignment="Right" Margin="0,0,15,15" VerticalAlignment="Bottom" Width="91" Height="29" FontSize="16" Click="btnOk_Click"/>
        
     </Grid>
 </Window>

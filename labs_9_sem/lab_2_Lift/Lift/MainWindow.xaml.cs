@@ -60,10 +60,8 @@ namespace Lift
         public void MoveToFloor(byte floor)
         {
             if (lift.currentFloor == floor || floor == 0)
-            {
                 return;
-            }
-
+           
             int dF3 = 1;
             if (lift.currentFloor > floor)
                 dF3 = -1;
@@ -104,34 +102,44 @@ namespace Lift
                 OpenDors();
                 await Task.Delay(TimeSpan.FromSeconds(lift.doorsTime));
                 CloseDors();
-
                 lift.currentState = LiftClass.States.wait;
+            }
 
-                if (lift.CallList.All(p => !p))
-                    lift.currentState = LiftClass.States.wait;
-                else
-                    MoveToFloor(lift.GetNextFloor());
+            if (lift.CallList.All(p => !p))
+            {
+                lift.currentState = LiftClass.States.wait;
+                return;
+            }
+            else
+            {
+                MoveToFloor(lift.GetNextFloor());
                 return;
             }
 
-            int dF3 = 1;
+
+            var dF3 = 1;
             if (lift.currentFloor > lift.targetFloor)
                 dF3 = -1;
             MoveOneFloor(Convert.ToByte(lift.currentFloor + dF3));
-
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as ToggleButton;
             var selectedFloor = Convert.ToByte(btn.Tag);
-
-            
+                        
             if (selectedFloor == lift.currentFloor)
             {
                 btn.IsChecked = false;
-                LiftDors();
+                if (lift.CallList.All(p=>!p))
+                    LiftDors();
                 lift.currentState = LiftClass.States.wait;
+                return;
+            }
+
+            if (btn.IsChecked == false)
+            {
+                lift.CallList[selectedFloor - 1] = false;
                 return;
             }
 
@@ -139,15 +147,10 @@ namespace Lift
             {
                 lift.CallList[selectedFloor - 1] = true;
                 MoveToFloor(lift.GetNextFloor());
+                return;
             }
 
             lift.CallList[selectedFloor - 1] = true;
-
-            if (btn.IsChecked == false)
-            {
-                lift.CallList[selectedFloor - 1] = false;
-            }
-            
         }
 
         private async void LiftDors()
@@ -156,7 +159,6 @@ namespace Lift
             await Task.Delay(TimeSpan.FromSeconds(lift.doorsTime));
             CloseDors();
         }
-
 
     }
 }
